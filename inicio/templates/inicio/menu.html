@@ -1,0 +1,9 @@
+    <div class="col-md-12 col-lg-6 text-start text-lg-end" data-aos="fade-up" data-aos-delay="100">
+      <div class="filters">
+        <a href="{% url 'obras:Obras' %}" {% if request.path|slice:":5" == "/obra" %} class="active" {% endif %}>Creación</a>
+        <a href="{% url 'produccion:Produccion' %}">Producción</a>
+        <a href="{% url 'bio:Bio' %}" {% if request.path == "/bio/" %} class="active" {% endif %}>Bio</a>
+        <a href="{% url 'contacto:Contacto' %}">Contacto</a>
+      </div>
+    </div>
+

@@ -1,0 +1,40 @@
+{% extends "inicio/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+    <!-- ======= Works Section ======= -->
+    <section class="section site-portfolio">
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-12 col-lg-6 mb-4 mb-lg-0" data-aos="fade-up">
+            <!--<h2></h2>-->
+            <p class="mb-0">Proyectos / Obras</p>
+          </div>
+        {% include "inicio/menu.html" %}
+        </div>
+        <!-- fin header -->
+
+        <div id="portfolio-grid" class="row no-gutter" data-aos="fade-up" data-aos-delay="200">
+
+          {% for obra in obras %}
+
+          <div class="item obras col-sm-6 col-md-4 col-lg-4 mb-4">
+            <a href="{% url 'obras:ObraDetalle' obra.id %}" class="item-wrap fancybox">
+              <div class="work-info">
+                <h3>{{obra.titulo}}</h3>
+                <span>{{obra.disciplina}}</span>
+              </div>
+              <img class="img-fluid" src="{{obra.imagen.url}}">
+            </a>
+          </div>
+          
+          {% endfor %}
+
+      
+        </div>
+      </div>
+    </section><!-- End  Works Section -->
+    {% endblock %}

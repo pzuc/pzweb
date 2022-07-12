@@ -1,0 +1,90 @@
+{% extends "inicio/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+    <!-- ======= Works Section ======= -->
+    <section class="section site-portfolio">
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-12 col-lg-6 mb-4 mb-lg-0" data-aos="fade-up">
+            <h2>{{obra.titulo}}</h2>
+            <p class="mb-0">{{obra.disciplina}}</p>
+          </div>
+
+            {% include "inicio/menu.html" %}
+
+        </div>
+
+        <!-- fin header -->
+
+      <div class="site-section pb-0">
+        <div class="container">
+          <div class="row align-items-stretch">
+            <div class="col-md-8" data-aos="fade-up">
+              <img src="{{obra.imagen.url}}" alt="Image" class="img-fluid">
+            </div>
+            <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
+              <div class="sticky-content">
+                <h3 class="h3">{{obra.titulo}}</h3>
+                <p class="mb-4"><span class="text-muted">{{obra.bajada}}</span></p>
+
+                <div class="mb-5">
+                  <p>{{obra.descripcion}}</p>
+
+                </div>
+
+                <ul class="list-unstyled list-line mb-5">
+                  <li>Año: {{obra.anio}}</li>
+                  <li>Lugar: {{obra.lugar}}</li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- ======= Testimonials Section ======= -->
+    <section class="section pt-0">
+      <div class="container">
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial">
+                  <img src="assets/img/person_1.jpg" alt="Image" class="img-fluid">
+                  <blockquote>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis
+                      explicabo inventore.</p>
+                  </blockquote>
+                  <p>&mdash; Jean Hicks</p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial">
+                  <img src="assets/img/person_2.jpg" alt="Image" class="img-fluid">
+                  <blockquote>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis
+                      explicabo inventore.</p>
+                  </blockquote>
+                  <p>&mdash; Chris Stanworth</p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    {% endblock %}

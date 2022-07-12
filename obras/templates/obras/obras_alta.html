@@ -1,0 +1,18 @@
+<html>
+    <tile>Mis obras</tile>
+    <body>
+
+        <p><ul>
+            {% for m in error_messages %}
+                <li>{{ m }}</li>
+            {% endfor %} 
+            </ul>
+        </p>
+        <form action="" method="post">
+            {% csrf_token %} 
+            {{form.as_p}}
+            <input type="submit" value="Enviar">
+        </form>
+
+    </body>
+</html>

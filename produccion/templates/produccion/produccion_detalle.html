@@ -1,0 +1,51 @@
+{% extends "inicio/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+    <!-- ======= Works Section ======= -->
+    <section class="section site-portfolio">
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-12 col-lg-6 mb-4 mb-lg-0" data-aos="fade-up">
+            <h2>{{obra.titulo}}</h2>
+            <p class="mb-0">{{obra.disciplina}}</p>
+          </div>
+
+            {% include "inicio/menu.html" %}
+
+        </div>
+
+        <!-- fin header -->
+
+      <div class="site-section pb-0">
+        <div class="container">
+          <div class="row align-items-stretch">
+            <div class="col-md-8" data-aos="fade-up">
+              <img src="{{proyecto.imagen.url}}" alt="Image" class="img-fluid">
+            </div>
+            <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
+              <div class="sticky-content">
+                <h3 class="h3">{{proyecto.titulo}}</h3>
+                <p class="mb-4"><span class="text-muted">{{proyecto.bajada}}</span></p>
+
+                <div class="mb-5">
+                  <p>{{proyecto.descripcion}}</p>
+
+                </div>
+
+                <ul class="list-unstyled list-line mb-5">
+                  <li>Año: {{proyecto.anio}}</li>
+                  <li>Lugar: {{proyecto.lugar}}</li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    
+    {% endblock %}
